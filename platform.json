@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/platformio/platform-nordicnrf52.git"
+    "url": "https://github.com/vladkozlov69/platform-nordicnrf52.git"
   },
   "version": "4.0.0",
   "packageRepositories": [
@@ -49,7 +49,7 @@
     "framework-arduinonordicnrf5": {
       "type": "framework",
       "optional": true,
-      "version": "~1.600.0"
+      "version": "https://github.com/vladkozlov69/arduino-nRF5.git"
     },
     "framework-arduino-nrf52-mbedos": {
       "type": "framework",
