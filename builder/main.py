@@ -137,7 +137,8 @@ env.Append(
     )
 )
 
-if use_adafruit:
+# TODO disable if softdevice
+if (use_adafruit and not env.get("SOFTDEVICEHEX")):
     env.Append(
         BUILDERS=dict(
             PackageDfu=Builder(
@@ -196,6 +197,7 @@ else:
         target_firm = env.MergeHex(
             join("$BUILD_DIR", "${PROGNAME}"),
             env.ElfToHex(join("$BUILD_DIR", "userfirmware"), target_elf))
+        print('SoftDevice ' + env.get("SOFTDEVICEHEX") +' will be used!')
     elif "DFUBOOTHEX" in env:
         if "nrfutil" == upload_protocol:
             target_firm = env.PackageDfu(
