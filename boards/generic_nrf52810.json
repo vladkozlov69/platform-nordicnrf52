@@ -6,7 +6,7 @@
     "ldscript": "nrf52_xxaa.ld",
     "core": "nRF5",
     "cpu": "cortex-m4",
-    "extra_flags": "-DARDUINO_NRF52_DK",
+    "extra_flags": "-DNRF52810 -DNRF52810_XXAA -DP0_PIN_NUM=32 -DNRF_P1=NRF_P0",
     "f_cpu": "64000000L",
     "mcu": "nrf52810",
     "variant": "nRF52DK"
