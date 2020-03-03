@@ -1,8 +1,5 @@
 {
   "build": {
-    "arduino":{
-      "ldscript": "nrf52832_s132_v6.ld"
-    },
     "core": "nRF5",
     "cpu": "cortex-m4",
     "extra_flags": "-DNRF52832_XXAA -DNRF52",
@@ -26,8 +23,9 @@
       ]
     ],
     "usb_product": "Feather nRF52832 Express",
+    "ldscript": "nrf52832_s132_v6.ld",
     "mcu": "nrf52832",
-    "variant": "feather_nrf52832",
+    "variant": "generic_nrf52832",
     "bsp": {
       "name": "adafruit"
     },
@@ -52,7 +50,7 @@
     "arduino",
     "zephyr"
   ],
-  "name": "Adafruit Bluefruit nRF52832 Feather",
+  "name": "Adafruit Bluefruit nRF52832 Generic",
   "upload": {
     "maximum_ram_size": 65536,
     "maximum_size": 524288,

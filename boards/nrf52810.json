@@ -8,11 +8,8 @@
     "cpu": "cortex-m4",
     "extra_flags": "-DARDUINO_NRF52_DK",
     "f_cpu": "64000000L",
-    "mcu": "nrf52832",
-    "variant": "nRF52DK",
-    "zephyr": {
-       "variant": "nrf52_pca10040"
-    }
+    "mcu": "nrf52810",
+    "variant": "nRF52DK"
   },
   "connectivity": [
     "bluetooth"
@@ -21,22 +18,22 @@
     "default_tools": [
       "jlink"
     ],
-    "jlink_device": "nRF52832_xxAA",
+    "jlink_device": "nRF52810_xxAA",
     "onboard_tools": [
       "cmsis-dap",
       "jlink"
     ],
-    "svd_path": "nrf52.svd"
+    "svd_path": "nrf52810.svd"
   },
   "frameworks": [
     "arduino",
     "mbed",
     "zephyr"
   ],
-  "name": "Nordic nRF52-DK",
+  "name": "Nordic nRF52810-DK",
   "upload": {
     "maximum_ram_size": 65536,
-    "maximum_size": 524288,
+    "maximum_size": 192000,
     "protocol": "jlink",
     "protocols": [
       "jlink",
@@ -47,6 +44,6 @@
       "mbed"
     ]
   },
-  "url": "https://developer.mbed.org/platforms/Nordic-nRF52-DK/",
+  "url": "https://os.mbed.com/platforms/Nordic-nRF52840-DK/",
   "vendor": "Nordic"
 }

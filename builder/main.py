@@ -137,7 +137,8 @@ env.Append(
     )
 )
 
-if use_adafruit:
+# TODO disable if softdevice
+if (use_adafruit and not env.get("SOFTDEVICEHEX")):
     env.Append(
         BUILDERS=dict(
             PackageDfu=Builder(
@@ -196,6 +197,7 @@ else:
         target_firm = env.MergeHex(
             join("$BUILD_DIR", "${PROGNAME}"),
             env.ElfToHex(join("$BUILD_DIR", "userfirmware"), target_elf))
+        print('SoftDevice ' + env.get("SOFTDEVICEHEX") +' will be used!')
     elif "DFUBOOTHEX" in env:
         if "nrfutil" == upload_protocol:
             target_firm = env.PackageDfu(
@@ -321,7 +323,7 @@ elif upload_protocol == "sam-ba":
     upload_actions = [
         env.VerboseAction(BeforeUpload, "Looking for upload port..."),
         env.VerboseAction("$UPLOADCMD", "Uploading $SOURCE")
-    ] 
+    ]
 
 elif upload_protocol.startswith("jlink"):
 
@@ -397,6 +399,14 @@ AlwaysBuild(env.Alias("upload", target_firm, upload_actions))
 AlwaysBuild(
     env.Alias("erase", None, env.VerboseAction("$ERASECMD",
                                                "Erasing...")))
+
+#
+# Information about obsolete method of specifying linker scripts
+#
+
+if any("-Wl,-T" in f for f in env.get("LINKFLAGS", [])):
+    print("Warning! '-Wl,-T' option for specifying linker scripts is deprecated. "
+          "Please use 'board_build.ldscript' option in your 'platformio.ini' file.")
 
 #
 # Default targets
