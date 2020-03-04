@@ -1,15 +1,15 @@
 {
   "build": {
     "arduino":{
-      "ldscript": "nrf52_xxaa.ld"
+      "ldscript": "nrf51_xxaa.ld"
     },
-    "ldscript": "nrf52_xxaa.ld",
+    "ldscript": "nrf51_xxaa.ld",
     "core": "nRF5",
-    "cpu": "cortex-m4",
-    "extra_flags": "-DNRF52810 -DNRF52810_XXAA -DP0_PIN_NUM=32 -DNRF_P1=NRF_P0 -D__HEAP_SIZE=2048 -D__STACK_SIZE=2048",
-    "f_cpu": "64000000L",
-    "mcu": "nrf52810",
-    "variant": "nRF52DK"
+    "cpu": "cortex-m0",
+    "extra_flags": "-DNRF51 -DNRF_P0=NRF_GPIO -DP0_PIN_NUM=32 -DNRF_P1=NRF_P0",
+    "f_cpu": "16000000L",
+    "mcu": "nrf51822",
+    "variant": "Generic_nRF51"
   },
   "connectivity": [
     "bluetooth"
@@ -18,22 +18,22 @@
     "default_tools": [
       "jlink"
     ],
-    "jlink_device": "nRF52810_xxAA",
+    "jlink_device": "nRF51822_xxAA",
     "onboard_tools": [
       "cmsis-dap",
       "jlink"
     ],
-    "svd_path": "nrf52810.svd"
+    "svd_path": "nrf51822.svd"
   },
   "frameworks": [
     "arduino",
     "mbed",
     "zephyr"
   ],
-  "name": "Nordic nRF52810-DK",
+  "name": "Generic_nRF51822",
   "upload": {
-    "maximum_ram_size": 65536,
-    "maximum_size": 192000,
+    "maximum_ram_size": 16384,
+    "maximum_size": 196608,
     "protocol": "jlink",
     "protocols": [
       "jlink",
