@@ -28,7 +28,7 @@
     "usb_product": "Feather nRF52840 Express",
     "ldscript": "nrf52840_s140_v6.ld",
     "mcu": "nrf52840",
-    "variant": "feather_nrf52840_express",
+    "variant": "generic_nrf52840",
     "bsp": {
       "name": "adafruit"
     },
