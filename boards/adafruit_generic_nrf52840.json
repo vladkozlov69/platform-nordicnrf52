@@ -26,7 +26,7 @@
       ]
     ],
     "usb_product": "Feather nRF52840 Express",
-    "ldscript": "nrf52840_s140_v6.ld",
+    "ldscript": "nrf52840_s140_v7.ld",
     "mcu": "nrf52840",
     "variant": "generic_nrf52840",
     "bsp": {
@@ -35,7 +35,7 @@
     "softdevice": {
       "sd_flags": "-DS140",
       "sd_name": "s140",
-      "sd_version": "6.1.1",
+      "sd_version": "7.0.1",
       "sd_fwid": "0x00B6"
     },
     "bootloader": {
