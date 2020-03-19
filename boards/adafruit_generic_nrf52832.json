@@ -1,5 +1,8 @@
 {
   "build": {
+    "arduino":{
+      "ldscript": "nrf52832_s132_v7.ld"
+    },
     "core": "nRF5",
     "cpu": "cortex-m4",
     "extra_flags": "-DNRF52832_XXAA -DNRF52",
