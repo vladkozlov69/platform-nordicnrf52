@@ -44,11 +44,7 @@
     "framework-arduinoadafruitnrf52": {
       "type": "framework",
       "optional": true,
-<<<<<<< HEAD
       "version": "https://github.com/vladkozlov69/Adafruit_nRF52_Arduino.git"
-=======
-      "version": "~1.1900.0"
->>>>>>> 64ee276cc78972fc6a6a3abdf480840ff70938ee
     },
     "framework-arduinonordicnrf5": {
       "type": "framework",
